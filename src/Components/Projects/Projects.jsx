@@ -80,7 +80,7 @@ const project = {
     "JWT",
   ],
   github: "https://github.com/Tiya22gif/SUNSHINE",
-  live: "https://sunshine-cqqr.onrender.com",
+  live: "https://sunshine-y6c6.onrender.com/",
 };
 
 const technicalHighlights = [
