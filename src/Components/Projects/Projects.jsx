@@ -1,112 +1,59 @@
-
-// import React from "react";
-
-// const Projects = () => {
-//   return (
-//     <div
-//       id="Projects"
-//       className="text-white md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-black shadow-xl mx-0 md:mx-20 bg-opacity-30 rounded-lg p-12"
-//     >
-//       <h1 className="text-2xl md:text-4xl font-bold mb-10">
-//         Projects
-//       </h1>
-
-//       <div className="w-full">
-
-//         {/* Sunshine */}
-//         <div className="mb-8">
-//           <h2 className="text-xl md:text-3xl font-semibold">
-//             Sunshine
-//           </h2>
-
-//           <p className="text-sm md:text-lg mt-3 text-gray-300">
-//             Currently developing a full-stack assistance platform focused on
-//             connecting people seeking urgent help with nearby individuals
-//             willing to assist. The project includes privacy-aware
-//             communication, location-based matching, request management,
-//             and AI-assisted features.
-//           </p>
-
-//           <p className="text-sm md:text-base mt-3 text-gray-400">
-//             Tech Stack: React.js, JavaScript, Tailwind CSS, Node.js,
-//             Express.js, MongoDB
-//           </p>
-
-//           <span className="inline-block mt-4 px-4 py-2 bg-zinc-950 rounded-full text-sm">
-//             🚧 In Development
-//           </span>
-//         </div>
-
-
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Projects;
-
-
-
-
 import React from "react";
-import {
-  FaGithub,
-  FaExternalLinkAlt,
-  FaArrowRight,
-} from "react-icons/fa";
-import {
-  FiCode,
-  FiDatabase,
-  FiLayers,
-  FiShield,
-  FiGlobe,
-} from "react-icons/fi";
+import sunshineLogo from "../../assets/sunshine.svg";
 
-const project = {
-  name: "SUNSHINE",
-  category: "Full-Stack Web Application",
-  description:
-    "A medical-help connection platform designed to connect people seeking assistance with people willing to help. SUNSHINE aims to make access to support more organised, approachable, and meaningful.",
-  focus:
-    "Built with a focus on full-stack development, authentication, database integration, REST API development, and user-centred design.",
-  technologies: [
-    "React.js",
-    "Vite",
-    "Tailwind CSS",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "Mongoose",
-    "JWT",
-  ],
-  github: "https://github.com/Tiya22gif/SUNSHINE",
-  live: "https://sunshine-y6c6.onrender.com/",
-};
+import { FaGithub, FaExternalLinkAlt, FaArrowRight, } from "react-icons/fa";
 
-const technicalHighlights = [
+import {
+  SiReact,
+  SiVite,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiJsonwebtokens,
+  SiAxios,
+  SiRender,
+} from "react-icons/si";
+
+import { FiShield, FiDroplet, FiHeart, FiMapPin, FiUsers, } from "react-icons/fi";
+
+const technologies = [
+  { icon: SiReact, name: "React" },
+  { icon: SiVite, name: "Vite" },
+  { icon: SiTailwindcss, name: "Tailwind CSS" },
+  { icon: SiNodedotjs, name: "Node.js" },
+  { icon: SiExpress, name: "Express" },
+  { icon: SiMongodb, name: "MongoDB" },
+  { icon: SiJsonwebtokens, name: "JWT" },
+  { icon: SiAxios, name: "Axios" },
+  { icon: SiRender, name: "Render" },
+];
+
+const features = [
   {
-    icon: <FiLayers />,
-    title: "Full-Stack Architecture",
-    description:
-      "A React-based frontend connected to a Node.js and Express backend.",
+    icon: FiUsers,
+    title: "Help Connections",
+    description: "Connect people seeking assistance with willing helpers.",
   },
   {
-    icon: <FiShield />,
-    title: "Authentication",
-    description:
-      "JWT-based authentication and protected application routes.",
+    icon: FiDroplet,
+    title: "Blood Assistance",
+    description: "Support blood and blood-component help connections.",
   },
   {
-    icon: <FiDatabase />,
-    title: "Database Integration",
-    description:
-      "MongoDB and Mongoose for structured application data management.",
+    icon: FiHeart,
+    title: "Donation Support",
+    description: "Connect people with potential organ and tissue donors.",
   },
   {
-    icon: <FiCode />,
-    title: "REST API Development",
-    description:
-      "Backend APIs designed to support communication between frontend and server.",
+    icon: FiMapPin,
+    title: "Nearby Resources",
+    description: "Discover relevant resources through location-based access.",
+  },
+  {
+    icon: FiShield,
+    title: "Privacy-Conscious",
+    description: "Designed with privacy-focused help request workflows.",
   },
 ];
 
@@ -114,208 +61,166 @@ function Projects() {
   return (
     <section
       id="Projects"
-      className="relative overflow-hidden bg-[#FAF9F6] px-6 py-24 text-[#202020] transition-colors duration-300 dark:bg-[#101010] dark:text-[#F5F5F5] md:px-12 lg:px-20"
+      className="relative isolate overflow-hidden bg-[#211F1D] px-6 py-28 text-[#F5F0E8] selection:bg-[#C77D4A] selection:text-white md:px-12 lg:px-20"
     >
-      <div className="mx-auto max-w-7xl">
-        {/* Section heading */}
+      {/* Background accents — same as About */}
+      <div className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-[#C77D4A]/10 blur-[130px]" />
+
+      <div className="pointer-events-none absolute bottom-0 left-0 h-[350px] w-[350px] rounded-full bg-[#C77D4A]/5 blur-[110px]" />
+
+      {/* Background grid — same as About */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.025]"
+        style={{
+          backgroundImage:
+            "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
+          backgroundSize: "65px 65px",
+        }}
+      />
+
+      <div className="relative mx-auto max-w-7xl">
+
+        {/* SECTION HEADING */}
         <div className="mb-16">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#D98937]">
-            Selected Work
-          </p>
-
-          <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
-            <h2 className="text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
-              Projects<span className="text-[#D98937]">.</span>
-            </h2>
-
-            <p className="max-w-md text-sm leading-7 text-gray-600 dark:text-gray-400 md:text-base">
-              Turning ideas into functional applications through thoughtful
-              engineering and continuous learning.
-            </p>
-          </div>
+          <h2 className="text-5xl font-bold tracking-[-0.055em] sm:text-6xl lg:text-7xl">
+            Solutions <span className="text-[#C77D4A]">developed .</span>
+          </h2>
         </div>
 
-        {/* Featured project */}
-        <article className="overflow-hidden rounded-2xl border border-black/10 bg-white dark:border-white/10 dark:bg-[#171717]">
-          <div className="grid lg:grid-cols-2">
-            {/* Project information */}
-            <div className="flex flex-col justify-between p-7 md:p-10 lg:p-12">
-              <div>
-                <div className="mb-8 flex flex-wrap items-center gap-3">
-                  <span className="rounded-full border border-[#D98937]/40 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#D98937]">
-                    Featured Project
-                  </span>
+        {/* FEATURED PROJECT */}
+        <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-20">
 
-                  <span className="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-gray-400">
-                    {project.category}
-                  </span>
-                </div>
+          {/* PROJECT INFORMATION */}
+          <div className="lg:col-span-7">
 
-                <h3 className="mb-5 text-4xl font-bold tracking-tight md:text-5xl">
-                  {project.name}
-                  <span className="text-[#D98937]">.</span>
-                </h3>
-
-                <p className="mb-5 text-base leading-8 text-gray-600 dark:text-gray-300">
-                  {project.description}
-                </p>
-
-                <p className="mb-9 text-sm leading-7 text-gray-500 dark:text-gray-400">
-                  {project.focus}
-                </p>
-
-                {/* Technologies */}
-                <div className="mb-9">
-                  <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400">
-                    Technology Stack
-                  </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((technology) => (
-                      <span
-                        key={technology}
-                        className="rounded-md border border-black/10 bg-[#FAF9F6] px-3 py-2 text-xs font-medium text-gray-700 dark:border-white/10 dark:bg-[#202020] dark:text-gray-300"
-                      >
-                        {technology}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Project links */}
-              <div className="flex flex-wrap items-center gap-4">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg bg-[#202020] px-5 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-[#D98937] dark:bg-white dark:text-black dark:hover:bg-[#D98937]"
-                >
-                  <FaGithub className="text-base" />
-                  View Source
-                  <FaExternalLinkAlt className="text-xs" />
-                </a>
-
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg border border-black/15 px-5 py-3 text-sm font-medium transition-all duration-300 hover:border-[#D98937] hover:text-[#D98937] dark:border-white/20"
-                >
-                  Live Preview
-                  <FaArrowRight className="text-xs" />
-                </a>
-              </div>
-            </div>
-
-            {/* Visual panel */}
-            <div className="relative flex min-h-[360px] items-center justify-center overflow-hidden bg-[#F0EDE7] p-7 dark:bg-[#20201E] md:min-h-[480px] md:p-10">
-              <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full border border-[#D98937]/20" />
-              <div className="absolute -bottom-24 -left-20 h-72 w-72 rounded-full border border-[#D98937]/20" />
-
-              <div className="relative w-full max-w-md">
-                <div className="mb-4 flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#A66A2B] dark:text-[#D98937]">
-                    Project Overview
-                  </span>
-                  <FiGlobe className="text-xl text-[#D98937]" />
-                </div>
-
-                <div className="rounded-xl border border-black/10 bg-white p-5 shadow-xl shadow-black/5 dark:border-white/10 dark:bg-[#151515] md:p-7">
-                  <div className="mb-7 flex items-center justify-between border-b border-black/10 pb-5 dark:border-white/10">
-                    <div>
-                      <p className="text-2xl font-bold tracking-tight">
-                        SUNSHINE
-                      </p>
-                      <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                        Human is Human. That's it.
-                      </p>
-                    </div>
-
-                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#D98937]/10 text-xl text-[#D98937]">
-                      ☀
-                    </div>
-                  </div>
-
-                  <div className="space-y-3">
-                    {[
-                      "Frontend Development",
-                      "Backend & REST APIs",
-                      "Database Integration",
-                      "Authentication",
-                    ].map((item, index) => (
-                      <div
-                        key={item}
-                        className="flex items-center gap-3 rounded-lg border border-black/5 bg-[#FAF9F6] p-3 dark:border-white/5 dark:bg-[#202020]"
-                      >
-                        <span className="flex h-7 w-7 items-center justify-center rounded-md bg-[#D98937]/10 text-xs font-semibold text-[#D98937]">
-                          0{index + 1}
-                        </span>
-
-                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                          {item}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="mt-6 border-t border-black/10 pt-5 dark:border-white/10">
-                    <p className="text-xs leading-6 text-gray-500 dark:text-gray-400">
-                      Built to connect people through technology and make
-                      meaningful help easier to access.
-                    </p>
-                  </div>
-                </div>
-
-                <p className="mt-4 text-right text-xs tracking-wider text-gray-500">
-                  IMAGINATION · INTUITION · INNOVATION
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Technical highlights */}
-          <div className="border-t border-black/10 px-7 py-9 dark:border-white/10 md:px-10 lg:px-12">
-            <p className="mb-7 text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400">
-              Engineering Highlights
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#AFA69B]">
+              Full-Stack Web Application
             </p>
 
-            <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
-              {technicalHighlights.map((item) => (
-                <div key={item.title}>
-                  <div className="mb-4 text-2xl text-[#D98937]">
-                    {item.icon}
-                  </div>
+            {/* PROBLEM */}
+            <div className="mt-7">
+              <h3 className="mb-3 text-xl font-semibold text-[#F5F0E8]">
+                The Problem
+              </h3>
 
-                  <h4 className="mb-2 text-sm font-semibold">
-                    {item.title}
-                  </h4>
+              <p className="max-w-xl text-sm leading-7 text-[#B9B0A6] sm:text-base">
+                Timely, trustworthy medical assistance remains difficult to access.
+              </p>
+            </div>
 
-                  <p className="text-sm leading-6 text-gray-500 dark:text-gray-400">
-                    {item.description}
+            {/* SOLUTION */}
+            <div className="mt-7">
+              <h3 className="mb-3 text-xl font-semibold text-[#F5F0E8]">
+                The Solution
+              </h3>
+
+              <p className="max-w-xl text-sm leading-7 text-[#B9B0A6] sm:text-base">
+                SUNSHINE connects people in need with the right help, resources, and support.
+              </p>
+                <div>
+                  <p className="text-sm font-medium tracking-wide text-[#AFA69B] mt-10">
+                    Built around one belief:
+                    <span className="ml-2 font-semibold text-[#ae8265]">
+                      Human is Human. That's it.
+                    </span>
                   </p>
-                </div>
-              ))}
+              </div>
+            </div>
+
+            {/* TECHNOLOGY ICONS */}
+            <div className="mt-9">
+              <p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-[#D99A70]">
+                Built With 
+              </p>
+
+              <div className="flex max-w-lg flex-wrap items-center gap-x-6 gap-y-5">
+                {technologies.map(({ icon: Icon, name }) => (
+                  <div
+                    key={name}
+                    title={name}
+                    aria-label={name}
+                    className="text-[27px] text-[#C7BDB3] transition-all duration-300 hover:-translate-y-1 hover:text-[#D99A70]"
+                  >
+                    <Icon />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* PROJECT LINKS */}
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+
+              <a
+                href="https://sunshine-y6c6.onrender.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 rounded-md bg-[#C77D4A] px-6 py-3.5 text-sm font-bold text-[#211F1D] transition-all duration-300 hover:bg-[#D99A70]"
+              >
+                Explore Live Project
+                <FaArrowRight />
+              </a>
+
+              <a
+                href="https://github.com/Tiya22gif/SUNSHINE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border border-white/20 px-6 py-3.5 text-sm font-semibold text-[#E5DDD3] transition-all duration-300 hover:border-[#C77D4A] hover:text-[#D99A70]"
+              >
+                <FaGithub className="text-base" />
+                Source Code
+                <FaExternalLinkAlt className="text-xs" />
+              </a>
+
             </div>
           </div>
-        </article>
 
-        {/* Closing statement */}
-        <div className="mt-16 flex flex-col justify-between gap-5 border-b border-black/10 pb-8 dark:border-white/10 md:flex-row md:items-center">
-          <p className="max-w-xl text-lg leading-8 text-gray-600 dark:text-gray-300">
-            Every project is an opportunity to learn, solve problems, and build
-            something that matters.
-          </p>
+          {/* SUNSHINE LOGO */}
+          <div className="lg:col-span-5">
 
-          <a
-            href="https://github.com/Tiya22gif"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-3 text-sm font-semibold transition-colors hover:text-[#D98937]"
-          >
-            More on GitHub
-            <FaArrowRight className="text-[#D98937]" />
-          </a>
+            <div className="flex flex-col items-center justify-center">
+
+              {/* LOGO + PROJECT NAME */}
+              <div className="flex items-center justify-center gap-3">
+                <img
+                  src={sunshineLogo}
+                  alt="SUNSHINE project logo"
+                  className="h-16 w-16 object-contain sm:h-20 sm:w-20"
+                />
+
+                <h3 className="text-5xl font-bold tracking-[-0.05em] sm:text-6xl lg:text-7xl">
+                  SUNSHINE
+                </h3>
+              </div>
+
+              {/* FIVE FEATURES */}
+              <div className="mt-8 space-y-5">
+                  {features.map((item) => {
+                    const Icon = item.icon;
+
+                    return (
+                      <div key={item.title} className="flex items-start gap-3">
+                        <Icon
+                          size={19}
+                          strokeWidth={1.6}
+                          className="mt-0.5 shrink-0 text-[#C77D4A]"
+                        />
+
+                        <div>
+                          <h4 className="text-sm font-semibold text-[#F5F0E8]">
+                            {item.title}
+                          </h4>
+                          <p className="mt-1 text-sm leading-6 text-[#AFA69B]">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
