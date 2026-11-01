@@ -32,14 +32,14 @@ const Navbar = () => {
         className={`
           relative mx-auto flex items-center justify-between
           rounded-full border border-[#D7A17E]/30
-          bg-[#A66F4F]/25
+          bg-[#575bcf]/90
           shadow-[0_8px_30px_rgba(30,20,15,0.10)]
           backdrop-blur-2xl
           transition-all duration-500 ease-in-out
           ${
             scrolled
-              ? "mt-3 max-w-5xl px-5 py-3 md:px-8"
-              : "mt-4 max-w-6xl px-5 py-3 md:px-8 md:py-4"
+              ? "mt-2.5 max-w-3xl px-4 py-2 md:px-6"
+              : "mt-4 max-w-7xl px-5 py-3 md:px- md:py-3"
           }
         `}
       >
@@ -53,13 +53,13 @@ const Navbar = () => {
             src={PortfolioIcon}
             alt="Tiyasha Shil Portfolio"
             className={`
-              rounded-full object-contain
+              rounded-full object-contain cursor-not-allowed
               transition-all duration-300 group-hover:scale-110
               ${scrolled ? "h-9 w-9" : "h-9 w-9 md:h-10 md:w-10"}
             `}
           />
 
-          <span className="whitespace-nowrap text-base font-extrabold tracking-wide md:text-lg">
+          <span className="whitespace-nowrap text-base cursor-not-allowed font-extrabold tracking-wide md:text-lg">
             TIYASHA
             <span className="ml-1 text-[#C77D4A]">SHIL.</span>
           </span>
@@ -75,7 +75,7 @@ const Navbar = () => {
                   block whitespace-nowrap rounded-full
                   border border-transparent px-3 py-2
                   text-lg font-semibold tracking-wide
-                  text-[#98be6b]
+                  text-[#e2e4df]
                   transition-all duration-300
                   hover:border-white/15
                   hover:bg-white/10
