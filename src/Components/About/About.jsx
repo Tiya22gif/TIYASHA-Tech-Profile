@@ -116,7 +116,7 @@ const About = () => {
                       B.Tech — Computer Science & Engineering
                     </p>
                     <p className="mt-1 text-sm text-[#AFA69B]">
-                      KGEC · 2024–2028
+                      KGEC · 2024 – 2028
                     </p>
                     <p className="mt-1 text-sm text-[#D99A70]">
                       Current CGPA - 7.67
